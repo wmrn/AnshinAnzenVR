@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Face deformation</title>
+	<meta charset="utf-8">
+	<style>
+	body {
+		margin: 0px;
+		overflow: hidden;
+	}
+
+	#example {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	</style>
+</head>
+
+<body>
+	<script src="libs/three.js"></script>
+	<script src="libs/adapter.js"></script>
+
+	<!--<script src="libs/StereoEffect.js"></script>-->
+	<script src="libs/DeviceOrientationControls.js"></script>
+	<script src="libs/OrbitControls.js"></script>
+	<script src="libs/CardboardEffect.js"></script>
+
+	<script src="libs/DDSLoader.js"></script>
+	<script src="libs/MTLLoader.js"></script>
+	<script src="libs/OBJLoader.js"></script>
+
+	<script src="libs/trakking/dat.gui.min.js"></script>
+	<script src="libs/trakking/utils.js"></script>
+	<script src="libs/trakking/jsfeat-min.js"></script>
+	<script src="libs/trakking/frontalface.js"></script>
+	<script src="libs/trakking/jsfeat_detect.js"></script>
+	<script src="libs/trakking/numeric-1.2.6.min.js"></script>
+	<script src="libs/trakking/mosse.js"></script>
+	<script src="libs/trakking/left_eye_filter.js"></script>
+	<script src="libs/trakking/right_eye_filter.js"></script>
+	<script src="libs/trakking/nose_filter.js"></script>
+	<script src="libs/trakking/model_pca_20_svm.js"></script>
+	<script src="libs/trakking/clm.js"></script>
+	<script src="libs/trakking/svmfilter_webgl.js"></script>
+	<script src="libs/trakking/svmfilter_fft.js"></script>
+	<script src="libs/trakking/mossefilter.js"></script>
+	<script src="libs/trakking/face_deformer.js"></script>
+
+<div id="example"></div>
+<div id="container">
+	<video id="video" width="400" height="300" autoplay></video>
+	<canvas id="canvas" width="400" height="300" style="height: 100%; min-width: 100%;  position: absolute;"></canvas>
+	<canvas id="drawing" width="400" height="300" style=" height: 100%; min-width: 100%; position: absolute;"></canvas>
+	<canvas id="webgl" width="400" height="300" style="height: 100%; min-width: 100%; position: absolute;"></canvas>
+</div>
+	<script src="main.js"></script>
+</body>
+
+</html>
